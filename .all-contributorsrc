@@ -21,6 +21,19 @@
         "tool",
         "eventOrganizing"
       ]
+    },
+    {
+      "login": "dokato",
+      "name": "dokato",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/4547289?v=4",
+      "profile": "https://github.com/dokato",
+      "contributions": [
+        "code",
+        "design",
+        "content",
+        "ideas",
+        "tool"
+      ]
     }
   ],
   "contributorsPerLine": 7,
