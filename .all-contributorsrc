@@ -54,6 +54,16 @@
         "content",
         "ideas"
       ]
+    },
+    {
+      "login": "nschawor",
+      "name": "Natalie",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/1282430?v=4",
+      "profile": "https://github.com/nschawor",
+      "contributions": [
+        "content",
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
