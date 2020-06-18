@@ -1,0 +1,13 @@
+name: mapMEEG_proto
+title: mapMEEG_proto
+username:
+account: johalgermissen
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2472055
+bundleId: 3287160
+url: https://johalgermissen.shinyapps.io/mapMEEG_proto/
+when: 1592483280.63043
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: LICENSE|README.md
