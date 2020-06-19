@@ -10,11 +10,17 @@ FORM_FIELDS <- tagList(
   textInput("ground", "Ground electrode", placeholder = "on the chest"),
   textInput("reference", "Reference", placeholder = "linked mastoids"),
   selectInput("erm_group", "Empty-Room-Recording", c("None" = 1, "Before" = 2, "After" = 3, "Before & After" = 4)),
-  textInput("baseline","Baseline Correction", placeholder = "Eg., -100 - 0ms"),
+  # Inputs for data collection (MEG)
+  selectInput("ch_types","Channel-types", c("Magnetometer"=1,"Gradiometer"=2,"EEG"=3)),
+  textInput("digitization","Head-Digitization", placeholder = "e.g RPA, LPA, Nasion, 4 Coils, add. 100 Points"),
+  #Inputs for data pre-processing
   textAreaInput("filter", "Filtering", placeholder = "Eg. butter bandpass filter 0.5 - 70 Hz of order 5, notch filter"),
-
-  textAreaInput("artef", "Artefact rejection", placeholder = "ICA was used"),
-  textAreaInput("trial", "Trial split", placeholder = "From -1 to 2, baseline corrected"),
+  textAreaInput("artefaction_subtraction", "Artefact subtraction", placeholder = "ICA was used"),
+  textAreaInput("trial", "Epoching", placeholder = "From -1 to 2, baseline corrected"),
+  textAreaInput("downsamp","Downsampling",placeholder = "512 Hz sampling rate"),
+  textInput("baseline","Baseline Correction", placeholder = "Eg., -100 - 0ms"),
+  textAreaInput("reref", "Re-referencing", placeholder = "common average"),
+  textAreaInput("ch_rej", "Channel rejection", placeholder = "common average"),
   textAreaInput("other", "Other")
 )
 
@@ -38,30 +44,37 @@ TEMPLATE_TEXT = "
 {input$ground}
 
 ## Reference
-
 {input$reference}
 
 ## Empty room recording
-
 {input$erm_group}
 
-## Baseline 
+## Channel type
+{input$ch_types}
 
-{input$baseline}
+## Digitization
+{input$digitization}
 
 ## Filtering
-
 {input$filter}
 
-
+## Baseline 
+{input$baseline}
 
 ## Artefacts
-
-{input$artef}
+{input$artefaction_subtraction}
 
 ## Trials
-
 {input$trial}
+
+## Downsampleing
+{input$downsamp}
+
+## Reference
+{input$reref}
+
+## Channel rejection
+{input$ch_rej}
 
 ## More details
 
