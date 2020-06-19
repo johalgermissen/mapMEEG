@@ -10,12 +10,16 @@ FORM_FIELDS <- tagList(
   textInput("ground", "Ground electrode", placeholder = "on the chest"),
   textInput("reference", "Reference", placeholder = "linked mastoids"),
   selectInput("erm_group", "Empty-Room-Recording", c("None" = 1, "Before" = 2, "After" = 3, "Before & After" = 4)),
+  #radioButtons("erm_group", h3("Empty-Room-Recording"), choices = list("None" = 1,"Before" = 2,   "After" = 3,  "Before & After"=4)),
   # Inputs for data collection (MEG)
   selectInput("ch_types","Channel-types", c("Magnetometer"=1,"Gradiometer"=2,"EEG"=3)),
   textInput("digitization","Head-Digitization", placeholder = "e.g RPA, LPA, Nasion, 4 Coils, add. 100 Points"),
   #Inputs for data pre-processing
   textAreaInput("filter", "Filtering", placeholder = "Eg. butter bandpass filter 0.5 - 70 Hz of order 5, notch filter"),
-  textAreaInput("artefaction_subtraction", "Artefact subtraction", placeholder = "ICA was used"),
+  textAreaInput("artefact_subtraction","Artefact subtraction", placeholder = "ICA was used"),
+  radioButtons("artefaction_rej",h3("Artifact rejection"), choices = list("Blink"=1,
+                                                                          "Saccades"=2,
+                                                                          "Muscle noise"=3)),textInput(inputId = "Other", label="Others"),
   textAreaInput("trial", "Epoching", placeholder = "From -1 to 2, baseline corrected"),
   textAreaInput("downsamp","Downsampling",placeholder = "512 Hz sampling rate"),
   textInput("baseline","Baseline Correction", placeholder = "Eg., -100 - 0ms"),
@@ -61,8 +65,11 @@ TEMPLATE_TEXT = "
 ## Baseline 
 {input$baseline}
 
-## Artefacts
-{input$artefaction_subtraction}
+## Artefact subtraction
+{input$artefact_subtraction}
+
+# Artefact rejection
+{input$artefaction_rej}
 
 ## Trials
 {input$trial}
