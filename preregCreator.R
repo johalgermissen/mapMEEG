@@ -2,12 +2,17 @@ library(shiny)
 library(glue)
 
 FORM_FIELDS <- tagList(
+  # Start input
   selectInput("modality", "Modality:", c("EEG", "MEG", "Other")),
+  # Inputs for data collection (EEG)
   textInput("device", "Recording device", placeholder = "Eg. Elekta"),
   textInput("cap", "Headset", placeholder = "Eg. System 10-20"),
   textInput("ground", "Ground electrode", placeholder = "on the chest"),
   textInput("reference", "Reference", placeholder = "linked mastoids"),
+  selectInput("erm_group", "Empty-Room-Recording", c("None" = 1, "Before" = 2, "After" = 3, "Before & After" = 4)),
+  textInput("baseline","Baseline Correction", placeholder = "Eg., -100 - 0ms"),
   textAreaInput("filter", "Filtering", placeholder = "Eg. butter bandpass filter 0.5 - 70 Hz of order 5, notch filter"),
+
   textAreaInput("artef", "Artefact rejection", placeholder = "ICA was used"),
   textAreaInput("trial", "Trial split", placeholder = "From -1 to 2, baseline corrected"),
   textAreaInput("other", "Other")
@@ -36,9 +41,19 @@ TEMPLATE_TEXT = "
 
 {input$reference}
 
+## Empty room recording
+
+{input$erm_group}
+
+## Baseline 
+
+{input$baseline}
+
 ## Filtering
 
 {input$filter}
+
+
 
 ## Artefacts
 
