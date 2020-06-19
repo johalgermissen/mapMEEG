@@ -1,6 +1,6 @@
 # Mapping the parameter space in EEG/MEG analyses (mapMEEG)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 
@@ -98,6 +98,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/marsipu"><img src="https://avatars3.githubusercontent.com/u/46245704?v=4" width="100px;" alt=""/><br /><sub><b>Martin Schulz</b></sub></a><br /><a href="#content-marsipu" title="Content">🖋</a> <a href="#ideas-marsipu" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/ufangYang"><img src="https://avatars3.githubusercontent.com/u/33165978?v=4" width="100px;" alt=""/><br /><sub><b>Yu-Fang Yang</b></sub></a><br /><a href="#content-ufangYang" title="Content">🖋</a> <a href="#ideas-ufangYang" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/nschawor"><img src="https://avatars2.githubusercontent.com/u/1282430?v=4" width="100px;" alt=""/><br /><sub><b>Natalie</b></sub></a><br /><a href="#content-nschawor" title="Content">🖋</a> <a href="#ideas-nschawor" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/carolyog"><img src="https://avatars3.githubusercontent.com/u/66519552?v=4" width="100px;" alt=""/><br /><sub><b>carolyog</b></sub></a><br /><a href="#content-carolyog" title="Content">🖋</a> <a href="#ideas-carolyog" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
